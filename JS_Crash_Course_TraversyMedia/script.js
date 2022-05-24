@@ -47,7 +47,7 @@ console.log(typeof nameJ);//(string)
 //Concatenation... the slow version
 console.log('my name is ' + nameJ + ' and I am ' + age);
 //Template String.... This is so much better!! and Quicker!!
-console.log(`My name is ${name} and I am ${age}`)
+console.log(`My name is ${nameJ} and I am ${age}`)
 
 
 console.log(`${rating} is something that ${nameJ} rates he is a ${isCool} cool guy`) //back tics make it a template string somehthing to keep in you back pocket
@@ -110,3 +110,76 @@ const person = {
 }
 console.log(person)//looking at entire print of it
 console.log(person.age)//finding specific on person
+console.log(person.hobbies[1])
+console.log(person.firstName, person.lastName);
+
+const {firstName, lastName, address :{city}} = person;// what this does is make the things inside the object into a variable that can be out of the object
+
+console.log(firstName); //Example
+console.log(address= {city}); //Other Example of that
+
+person.email = 'adm@gmail.com';
+
+console.log(person.email);
+
+//array of objects
+
+const todos = [
+    {
+        id:1,
+        text:'take out trash',
+        isCompleted: true
+    },
+    {
+        id:2,
+        text:'meeting with boss',
+        isCompleted: true
+    },
+    {
+        id:3,
+        text:'family appt.',
+        isCompleted: true
+    }
+]
+
+const todoJSON = JSON.stringify(todos); //something that will be talked about later
+console.log(todoJSON)
+
+
+//For 
+
+for(var p = 0; p < 10; p++){
+    console.log(`for loop number ${p}`)
+}
+
+//while 
+
+var q = 0;
+
+while(q<10) {
+    console.log(`while loop number ${q}`)
+    q++
+}
+
+
+//going through array
+
+var arrayy = [1,2,3,4,5,6,7]
+
+for(let e of arrayy) {
+    console.log(arrayy[e])
+}
+
+var ww = 10;
+var test = '10'
+
+if(ww == 10) {
+    console.log('w is 10')
+}
+
+
+if(test === 10) {
+    console.log('test is 10') 
+} else{
+    console.log('test is 10 but it is stringed 10')
+}
